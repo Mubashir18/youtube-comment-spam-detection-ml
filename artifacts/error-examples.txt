@@ -1,0 +1,19 @@
+ERROR EXAMPLES (main operating point)
+======================================================================
+Threshold: 0.4457
+
+False negatives (spam predicted ham): 8
+----------------------------------------------------------------------
+p(spam)=0.0575 | http://psnboss.com/?ref=2tGgp3pV6L this is the song﻿
+p(spam)=0.1721 | Help shakira&#39;s waka waka be the first song by a female artist to reach 1 billion views.<br />(dark horse is ahead by roughly 100 million more views, and roar has only 50 million more views)<br /><a href="https://w...
+p(spam)=0.3032 | Fuck it was the best ever 0687119038 nummber of patrik kluivert his son share !﻿
+p(spam)=0.3072 | Share this video.. This song can beat PSY - Gangnam Style!
+p(spam)=0.3465 | get GWAR to play 2015 superbowl  http://www.change.org/petitions/the-national-football-league-allow-gwar-to-perform-the-2015-super-bowl-halftime-show#share ﻿
+
+False positives (ham predicted spam): 30
+----------------------------------------------------------------------
+p(spam)=0.8077 | The first comment is chuck norrus ovbiously :D﻿
+p(spam)=0.7352 | I dont even watch it anymore i just come here to check on 2 Billion or not﻿
+p(spam)=0.5763 | Im just to check how much views it has﻿
+p(spam)=0.5494 | Justin bieber = gay ﻿
+p(spam)=0.5420 | i want to smack this year boy in to forever﻿

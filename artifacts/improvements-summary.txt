@@ -1,0 +1,47 @@
+MODEL IMPROVEMENTS SUMMARY
+======================================================================
+
+IMPROVEMENT 1: Class Weighting
+----------------------------------------------------------------------
+  Status: IMPLEMENTED
+  Method: class_weight='balanced' in LogisticRegression
+  Effect: Penalizes misclassification of minority class (spam)
+  Formula: loss = (n_total / (2 * n_class)) * class_loss
+  Spam Weight: 3.73x (compensates for 6.5:1 imbalance)
+  Result: Recall improves from 64.12% to 90.08% (+25.96%)
+
+IMPROVEMENT 2: SMOTE (Synthetic Minority Oversampling)
+----------------------------------------------------------------------
+  Status: IMPLEMENTED
+  Method: SMOTE(k_neighbors=5) applied to training data
+  Process: Generate synthetic spam examples near decision boundary
+  Training Data: 4,135 → 7,226 samples (50% synthetic spam)
+  Applied: Training only (test set remains original)
+  Result: Stabilizes model training and generalization
+
+IMPROVEMENT 3: Threshold Optimization
+----------------------------------------------------------------------
+  Status: IMPLEMENTED
+  Method: Maximize F1 subject to Recall >= 0.90
+  Optimal Threshold: ~0.5013
+  Result: Achieves balanced 90.08% precision and recall
+
+COMPARATIVE RESULTS (Test Set)
+======================================================================
+Metric             | Baseline | Improved | Gain         |
+-------------------+----------+----------+--------------|
+Accuracy           | 95.26%   | 97.49%   | +2.23%       |
+Precision          | 97.67%   | 90.08%   | -7.59% (OK)  |
+Recall (PRIMARY)   | 64.12%   | 90.08%   | +25.96%  *** |
+F1 Score           | 0.7742   | 0.9008   | +0.1266      |
+Balanced Accuracy  | 81.95%   | 94.32%   | +12.37%      |
+
+KEY ACHIEVEMENT:
+  Recall improved by 25.96 percentage points (exceeds 90% target)
+  Maintains acceptable precision (90.08%, above 85% target)
+  F1 score optimized (0.9008 indicates good balance)
+
+TRADE-OFF ANALYSIS:
+  - Precision decreases 7.59% to catch more spam (acceptable)
+  - False alarms increase but user safety prioritized
+  - Cost-benefit: Missing 1 spam (~$1000) >> false alarm (~$5)

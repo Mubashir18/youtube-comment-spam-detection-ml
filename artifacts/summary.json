@@ -1,0 +1,29 @@
+{
+  "dataset_name": "UCI YouTube Spam Collection",
+  "dataset_url": "https://archive.ics.uci.edu/dataset/380/youtube+spam+collection+dataset",
+  "license": "CC BY 4.0",
+  "raw_rows": 1956,
+  "missing_labels": 0,
+  "missing_messages": 0,
+  "exact_duplicates": 196,
+  "used_rows": 1760,
+  "used_ham": 919,
+  "used_spam": 841,
+  "spam_ratio": 0.4778409090909091,
+  "imbalance_ratio_ham_to_spam": 1.0927467300832343,
+  "avg_chars": 96.33579545454545,
+  "avg_words": 15.684659090909092,
+  "train_size": 1408,
+  "test_size": 352,
+  "train_spam_ratio": 0.47798295454545453,
+  "test_spam_ratio": 0.4772727272727273,
+  "threshold_main": 0.44570146115341197,
+  "threshold_robust": 0.44570146115341197,
+  "cm_main": {
+    "tn": 154,
+    "fp": 30,
+    "fn": 8,
+    "tp": 160
+  },
+  "metrics_table_csv": "artifacts/metrics-table.csv"
+}

@@ -1,0 +1,38 @@
+MODEL INTERPRETATION & FEATURE ANALYSIS
+============================================================
+
+TOP 15 SPAM INDICATORS (Positive Weights)
+------------------------------------------------------------
+ 1. check                                    : +5.6021
+ 2. subscribe                                : +4.6732
+ 3. channel                                  : +3.2054
+ 4. subscribers                              : +1.8920
+ 5. like comment                             : +1.8817
+ 6. thank                                    : +1.7257
+ 7. comment                                  : +1.6325
+ 8. share                                    : +1.6162
+ 9. free                                     : +1.5919
+10. new                                      : +1.5347
+11. help                                     : +1.4671
+12. visit                                    : +1.3874
+13. hey                                      : +1.3798
+14. follow                                   : +1.3723
+15. vote                                     : +1.3710
+
+TOP 15 HAM INDICATORS (Negative Weights)
+------------------------------------------------------------
+ 1. fuck                                     : -1.0327
+ 2. beautiful                                : -1.0570
+ 3. came                                     : -1.0606
+ 4. waka                                     : -1.0778
+ 5. shuffle                                  : -1.0874
+ 6. charlie                                  : -1.1035
+ 7. years                                    : -1.1376
+ 8. 2015                                     : -1.2514
+ 9. shakira                                  : -1.4509
+10. billion                                  : -1.7395
+11. good                                     : -1.8327
+12. best                                     : -1.8350
+13. love                                     : -2.1279
+14. views                                    : -2.5332
+15. song                                     : -2.5985

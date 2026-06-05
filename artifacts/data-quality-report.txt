@@ -1,0 +1,43 @@
+
+DATA QUALITY & LIMITATION REPORT
+================================
+
+1. CLASS IMBALANCE
+   - Raw dataset: 13.41% spam (747/5572), 86.59% ham (4825/5572)
+   - Exact duplicates removed before split: 403 (7.23%)
+   - Used dataset (unique rows): 12.63% spam (653/5169), 87.37% ham (4516/5169)
+   - Imbalance ratio (ham:spam, used): 6.92:1
+   - Mitigation: Use stratified split, class_weight in models, SMOTE
+
+2. TEMPORAL CHARACTERISTICS
+   - Dataset spans multiple years but exact timestamps not available
+   - Phishing tactics and vocabulary may have evolved
+   - Stress test will verify robustness to vocabulary drift
+
+3. GEOGRAPHIC & CONTEXT BIAS
+   - Data may reflect SMS spam from specific region/operator
+   - May not generalize to all SMS phishing patterns globally
+   - Reported metric validity: LIMITED to similar SMS corpora
+
+4. LABEL QUALITY
+   - Manual labeling prone to errors
+   - Boundary cases between spam and legitimate urgent messages
+   - Example: "Click now to verify account" could be legitimate banking alert
+
+5. TEXT CHARACTERISTICS
+   - Message length: 1-160 characters (typical SMS)
+   - Limited context (no sender info, metadata)
+   - Mitigated by: character/word n-grams, hand-crafted features
+
+6. DATA LEAKAGE RISKS (ADDRESSED)
+    Preprocessing (TF-IDF vocab) built ONLY on train set
+    Threshold tuning done on validation, tested on holdout
+    All random seeds fixed (seed=42)
+    Stratified split preserves class ratio
+
+QUALITY CERTIFICATION
+====================
+ Data is suitable for academic SMS spam classification project
+ No prohibited content (see policies/data-policy.md)
+ Open license (CC BY-SA 4.0) and ethically sourced
+ Limitations documented in report

@@ -1,0 +1,16 @@
+ROBUSTNESS TESTING FINDINGS (extra dataset)
+================================================================================
+Threshold used (security-first): 0.4457
+
+TEST 1: Character noise
+  Clean recall: 95.2381%
+  30% noise recall: 88.6905%
+
+TEST 2: Vocabulary drift (simple synonym mapping)
+  0% drift recall: 95.2381%
+  50% drift recall: 91.0714%
+
+TEST 3: Adversarial obfuscation
+  spacing: recall=100.0000%, precision=49.2669%
+  numbers: recall=95.8333%, precision=49.2355%
+  mixed: recall=100.0000%, precision=47.7273%
